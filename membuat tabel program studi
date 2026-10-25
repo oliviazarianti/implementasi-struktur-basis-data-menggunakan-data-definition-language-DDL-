@@ -1,0 +1,7 @@
+CREATE TABLE program_studi (
+    kode_prodi varchar(10) NOT NULL,
+    nama_prodi varchar(100) NOT NULL,
+    fakultas varchar(100) NOT NULL,
+
+    PRIMARY KEY (kode_prodi)
+);
