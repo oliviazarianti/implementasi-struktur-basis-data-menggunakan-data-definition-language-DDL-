@@ -1,0 +1,12 @@
+CREATE TABLE mata_kuliah (
+    kode_mk varchar(10) NOT NULL,
+    nama_mk varchar(100) NOT NULL,
+    jumlah_sks int NOT NULL,
+    kode_prodi varchar(10) NOT NULL,
+
+    PRIMARY KEY (kode_mk),
+
+    CONSTRAINT fk_mk_prodi
+        FOREIGN KEY (kode_prodi)
+        REFERENCES program_studi(kode_prodi)
+);
