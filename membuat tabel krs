@@ -1,0 +1,9 @@
+CREATE TABLE krs (
+    id_krs int NOT NULL AUTO_INCREMENT,
+    nim varchar(15) NOT NULL,
+    kode_mk varchar(10) NOT NULL,
+    semester varchar(10) NOT NULL,
+    tahun_akademik varchar(9) NOT NULL,
+    tanggal_pengambilan date,
+
+    PRIMARY KEY (id_krs),
