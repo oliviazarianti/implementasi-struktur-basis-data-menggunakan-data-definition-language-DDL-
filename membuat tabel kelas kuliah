@@ -1,0 +1,17 @@
+CREATE TABLE kelas_kuliah (
+    kode_kelas varchar(10) NOT NULL,
+    nama_kelas varchar(50) NOT NULL,
+    tahun_ajaran varchar(9) NOT NULL,
+    kode_induk_dosen varchar(20) NOT NULL,
+    kode_mk varchar(10) NOT NULL,
+
+    PRIMARY KEY (kode_kelas),
+
+    CONSTRAINT fk_kelas_dosen
+        FOREIGN KEY (kode_induk_dosen)
+        REFERENCES dosen(kode_induk_dosen),
+
+    CONSTRAINT fk_kelas_mk
+        FOREIGN KEY (kode_mk)
+        REFERENCES mata_kuliah(kode_mk)
+);
