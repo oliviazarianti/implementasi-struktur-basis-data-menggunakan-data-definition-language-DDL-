@@ -1,0 +1,15 @@
+CREATE TABLE dosen (
+    kode_induk_dosen varchar(20) NOT NULL,
+    email varchar(100) NOT NULL,
+    nama_dosen varchar(100) NOT NULL,
+    jenis_kelamin char(1),
+    no_telepon varchar(15),
+    kode_prodi varchar(10) NOT NULL,
+
+    PRIMARY KEY (kode_induk_dosen),
+    UNIQUE (email),
+
+    CONSTRAINT fk_dosen_prodi
+        FOREIGN KEY (kode_prodi)
+        REFERENCES program_studi(kode_prodi)
+);
